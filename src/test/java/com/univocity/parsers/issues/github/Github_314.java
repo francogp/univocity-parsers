@@ -18,6 +18,7 @@ package com.univocity.parsers.issues.github;
 
 import com.univocity.parsers.common.*;
 import com.univocity.parsers.common.record.*;
+import com.univocity.parsers.common.record.Record;
 import com.univocity.parsers.csv.*;
 import org.testng.annotations.*;
 
@@ -39,8 +40,8 @@ public class Github_314 {
 		CsvParserSettings settings = new CsvParserSettings();
 		settings.detectFormatAutomatically();
 		settings.setHeaderExtractionEnabled(true);
-		CsvParser parser = new CsvParser(settings);
-		IterableResult<Record, ParsingContext> iter = parser.iterateRecords(new StringReader("a,b,c\n1,2,3\n4,5,6\n"));
+		CsvParser                               parser = new CsvParser(settings);
+		IterableResult< Record, ParsingContext> iter   = parser.iterateRecords(new StringReader("a,b,c\n1,2,3\n4,5,6\n"));
 		iter.getContext().parsedHeaders(); // this throws a NullPointerException
 
 		Iterator<Record> it = iter.iterator();

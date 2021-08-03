@@ -17,6 +17,7 @@ package com.univocity.parsers.fixed;
 
 import com.univocity.parsers.common.*;
 import com.univocity.parsers.common.record.*;
+import com.univocity.parsers.common.record.Record;
 
 import java.util.*;
 import java.util.Map.*;
@@ -66,7 +67,8 @@ class Lookup {
 			}
 
 			@Override
-			public Record toRecord(String[] row) {
+			public
+			Record toRecord(String[] row) {
 				if (recordFactory == null) {
 					recordFactory = new RecordFactory(this);
 				}

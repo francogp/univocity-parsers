@@ -16,6 +16,7 @@
 package com.univocity.parsers.common;
 
 import com.univocity.parsers.common.record.*;
+import com.univocity.parsers.common.record.Record;
 
 /**
  * A simple a wrapper for a {@link Context}.
@@ -91,7 +92,8 @@ public abstract class ContextWrapper<T extends Context> implements Context {
 	}
 
 	@Override
-	public Record toRecord(String[] row) {
+	public
+	Record toRecord(String[] row) {
 		return context.toRecord(row);
 	}
 

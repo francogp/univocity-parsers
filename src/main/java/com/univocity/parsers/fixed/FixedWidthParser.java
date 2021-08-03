@@ -18,6 +18,7 @@ package com.univocity.parsers.fixed;
 import com.univocity.parsers.common.*;
 import com.univocity.parsers.common.input.*;
 import com.univocity.parsers.common.record.*;
+import com.univocity.parsers.common.record.Record;
 
 /**
  * A fast and flexible fixed-with parser implementation.
@@ -116,7 +117,8 @@ public class FixedWidthParser extends AbstractParser<FixedWidthParserSettings> {
 					return lookupFormat != null ? NormalizedString.toArray(lookupFormat.fieldNames) : super.headers();
 				}
 
-				public Record toRecord(String[] row) {
+				public
+				Record toRecord(String[] row) {
 					if (lookupFormat != null) {
 						if (lookupFormat.context == null) {
 							lookupFormat.initializeLookupContext(context, lookupFormat.fieldNames);
@@ -356,4 +358,3 @@ public class FixedWidthParser extends AbstractParser<FixedWidthParserSettings> {
 		}
 	}
 }
-

@@ -16,6 +16,7 @@
 package com.univocity.parsers.common;
 
 import com.univocity.parsers.common.record.*;
+import com.univocity.parsers.common.record.Record;
 
 import java.util.*;
 
@@ -137,7 +138,8 @@ class NoopParsingContext implements ParsingContext {
 	}
 
 	@Override
-	public Record toRecord(String[] row) {
+	public
+	Record toRecord(String[] row) {
 		return null;
 	}
 

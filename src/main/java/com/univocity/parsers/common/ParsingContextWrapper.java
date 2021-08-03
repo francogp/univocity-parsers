@@ -15,7 +15,7 @@
  */
 package com.univocity.parsers.common;
 
-import com.univocity.parsers.common.record.*;
+import com.univocity.parsers.common.record.Record;
 
 import java.util.*;
 
@@ -91,7 +91,8 @@ public class ParsingContextWrapper extends ContextWrapper<ParsingContext> implem
 	}
 
 	@Override
-	public Record toRecord(String[] row) {
+	public
+	Record toRecord(String[] row) {
 		return context.toRecord(row);
 	}
 }

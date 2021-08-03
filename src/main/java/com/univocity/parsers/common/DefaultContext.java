@@ -16,6 +16,7 @@
 package com.univocity.parsers.common;
 
 import com.univocity.parsers.common.record.*;
+import com.univocity.parsers.common.record.Record;
 
 /**
  * Default implementation of the {@link Context} interface with essential information about the output being produced.
@@ -137,7 +138,8 @@ public class DefaultContext implements Context {
 	}
 
 	@Override
-	public Record toRecord(String[] row) {
+	public
+	Record toRecord(String[] row) {
 		if (recordFactory == null) {
 			recordFactory = new RecordFactory(this);
 		}
