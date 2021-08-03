@@ -18,6 +18,7 @@ package com.univocity.parsers.examples;
 import com.univocity.parsers.common.*;
 import com.univocity.parsers.common.processor.*;
 import com.univocity.parsers.common.record.*;
+import com.univocity.parsers.common.record.Record;
 import com.univocity.parsers.conversions.*;
 import com.univocity.parsers.csv.*;
 import org.testng.annotations.*;
@@ -121,7 +122,7 @@ public class CsvParserExamples extends Example {
 		CsvParser parser = new CsvParser(settings);
 
 		//##CODE_START
-		for(Record record : parser.iterateRecords(getReader("/examples/example.csv"))){
+		for( Record record : parser.iterateRecords(getReader("/examples/example.csv"))){
 			println(out, Arrays.toString(record.getValues()));
 		}
 

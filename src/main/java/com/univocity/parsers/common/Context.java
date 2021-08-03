@@ -16,6 +16,7 @@
 package com.univocity.parsers.common;
 
 import com.univocity.parsers.common.record.*;
+import com.univocity.parsers.common.record.Record;
 
 /**
  * Basic context information used internally by instances of {@link com.univocity.parsers.common.processor.core.Processor} and {@link com.univocity.parsers.common.record.Record}.

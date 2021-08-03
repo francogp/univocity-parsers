@@ -19,6 +19,7 @@ import com.univocity.parsers.common.fields.*;
 import com.univocity.parsers.common.input.*;
 import com.univocity.parsers.common.processor.*;
 import com.univocity.parsers.common.record.*;
+import com.univocity.parsers.common.record.Record;
 import com.univocity.parsers.fixed.*;
 
 import java.io.*;
@@ -517,7 +518,7 @@ public abstract class AbstractWriter<S extends CommonWriterSettings<?>> {
 	 * @param records the records to transformed by a {@link RowWriterProcessor} and then written to the output
 	 * @param <T>     the concrete Record type
 	 */
-	public final <T extends Record> void processRecords(T[] records) {
+	public final <T extends Record > void processRecords(T[] records) {
 		for (T record : records) {
 			processRecord(record);
 		}

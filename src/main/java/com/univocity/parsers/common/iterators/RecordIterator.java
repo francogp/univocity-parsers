@@ -17,6 +17,7 @@ package com.univocity.parsers.common.iterators;
 
 import com.univocity.parsers.common.*;
 import com.univocity.parsers.common.record.*;
+import com.univocity.parsers.common.record.Record;
 
 import java.io.*;
 
@@ -33,7 +34,8 @@ public abstract class RecordIterator extends ParserIterator<Record> {
 	}
 
 	@Override
-	protected final Record nextResult() {
+	protected final
+	Record nextResult() {
 		return parser.parseNextRecord();
 	}
 }

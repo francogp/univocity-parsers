@@ -21,6 +21,7 @@ import com.univocity.parsers.common.iterators.*;
 import com.univocity.parsers.common.processor.*;
 import com.univocity.parsers.common.processor.core.*;
 import com.univocity.parsers.common.record.*;
+import com.univocity.parsers.common.record.Record;
 
 import java.io.*;
 import java.nio.charset.*;
@@ -647,7 +648,8 @@ public abstract class AbstractParser<T extends CommonParserSettings<?>> {
 	 *
 	 * @return the {@link Record} containing the values parsed from the input line
 	 */
-	public final Record parseRecord(String line) {
+	public final
+	Record parseRecord(String line) {
 		String[] values = parseLine(line);
 		if (values == null) {
 			return null;

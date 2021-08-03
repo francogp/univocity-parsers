@@ -19,6 +19,7 @@ import com.univocity.parsers.*;
 import com.univocity.parsers.common.*;
 import com.univocity.parsers.common.processor.*;
 import com.univocity.parsers.common.record.*;
+import com.univocity.parsers.common.record.Record;
 import org.testng.annotations.*;
 
 import java.io.*;
@@ -776,7 +777,7 @@ public class CsvParserTest extends ParserTestCase {
 
 		input = newReader("/csv/iterating_test.csv");
 		i = 0;
-		for (Record row : parser.iterateRecords(input)) {
+		for ( Record row : parser.iterateRecords(input)) {
 			assertEquals(row.getValues(), correctRows[i++]);
 		}
 
